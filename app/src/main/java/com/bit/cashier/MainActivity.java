@@ -17,7 +17,8 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     Button plus, minus;
-    TextView counter;
+    public static TextView counter, total;
+    public static double t = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,21 +28,27 @@ public class MainActivity extends AppCompatActivity {
         minus = findViewById(R.id.minus);
         plus = findViewById(R.id.plus);
         counter = findViewById(R.id.counter);
+        total = findViewById(R.id.total);
         recyclerView = findViewById(R.id.recycle_view);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
         recyclerView.setLayoutManager(gridLayoutManager);
 
 
         ArrayList<Unit> units = new ArrayList<>();
-        units.add(new Unit("05 DA", 361));
-        units.add(new Unit("10 DA", 126));
-        units.add(new Unit("20 DA", 66));
-        units.add(new Unit("50 DA", 1200));
-        units.add(new Unit("100 DA", 500));
-        units.add(new Unit("200 DA", 47));
-        units.add(new Unit("1000 DA", 14));
-        units.add(new Unit("2000 DA", 0));
-        units.add(new Unit("10000 DA", 2));
+        units.add(new Unit("5", 361));
+        units.add(new Unit("10", 126));
+        units.add(new Unit("20", 66));
+        units.add(new Unit("50", 1200));
+        units.add(new Unit("100", 500));
+        units.add(new Unit("200", 47));
+        units.add(new Unit("1000", 14));
+        units.add(new Unit("2000", 0));
+        units.add(new Unit("10000", 2));
+
+        for (Unit u : units) {
+            t += u.getValue();
+        }
+        total.setText(String.valueOf(t)+"  DA");
 
         UnitAdapter adapter = new UnitAdapter(units);
         recyclerView.setAdapter(adapter);

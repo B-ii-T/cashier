@@ -14,6 +14,7 @@ import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
+import com.bit.cashier.MainActivity.*;
 
 public class UnitAdapter extends RecyclerView.Adapter<UnitAdapter.UnitViewHolder> {
     private ArrayList<Unit> units;
