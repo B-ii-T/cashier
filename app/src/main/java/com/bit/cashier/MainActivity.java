@@ -33,15 +33,15 @@ public class MainActivity extends AppCompatActivity {
 
 
         ArrayList<Unit> units = new ArrayList<>();
-        units.add(new Unit("05 DA", 361));
-        units.add(new Unit("10 DA", 126));
-        units.add(new Unit("20 DA", 66));
-        units.add(new Unit("50 DA", 1200));
-        units.add(new Unit("100 DA", 500));
-        units.add(new Unit("200 DA", 47));
+        units.add(new Unit("05 DA", 2));
+        units.add(new Unit("10 DA", 8));
+        units.add(new Unit("20 DA", 6));
+        units.add(new Unit("50 DA", 25));
+        units.add(new Unit("100 DA", 10));
+        units.add(new Unit("200 DA", 16));
         units.add(new Unit("1000 DA", 14));
-        units.add(new Unit("2000 DA", 0));
-        units.add(new Unit("10000 DA", 2));
+        units.add(new Unit("2000 DA", 18));
+        units.add(new Unit("10000 DA", 5));
 
         UnitAdapter adapter = new UnitAdapter(units);
         recyclerView.setAdapter(adapter);

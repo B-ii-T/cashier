@@ -55,7 +55,7 @@ public class UnitAdapter extends RecyclerView.Adapter<UnitAdapter.UnitViewHolder
                 @Override
                 public void onClick(View v) {
                     int c = Integer.parseInt(count_txt.getText().toString());
-                    c += 10;
+                    c += 1;
                     count_txt.setText(String.valueOf(c));
                 }
             });
@@ -63,8 +63,8 @@ public class UnitAdapter extends RecyclerView.Adapter<UnitAdapter.UnitViewHolder
                 @Override
                 public void onClick(View v) {
                     int c = Integer.parseInt(count_txt.getText().toString());
-                    if (c >= 10){c -= 10;}
-                    else if (c < 10 && c >0){c -= 1;}
+                    if (c >= 1){c -= 1;}
+                    else if (c < 1 && c >0){c -= 1;}
                     count_txt.setText(String.valueOf(c));
                 }
             });
