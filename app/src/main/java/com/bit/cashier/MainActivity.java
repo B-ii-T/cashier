@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         ArrayList<Unit> units = new ArrayList<>();
-        units.add(new Unit("5", 361));
+        units.add(new Unit("5", 360));
         units.add(new Unit("10", 126));
         units.add(new Unit("20", 66));
         units.add(new Unit("50", 1200));
